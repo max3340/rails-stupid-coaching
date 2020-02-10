@@ -1,0 +1,16 @@
+<% ma_question = params["question"] %>
+<% qui = "you: " %>
+<% coach = "Coach's answer: " %>
+<%= qui + ma_question %>
+<br>
+<% if ma_question ==  "I am going to work" %>
+<%= coach + "Great!" %>
+<% elsif ma_question.include? "?" %>
+<%= coach + "Silly question, get dressed and go to work!" %>
+<% else %>
+<%= coach + "I don't care, get dressed and go to work!" %>
+<% end %>
+<br>
+<%= link_to 'Ask a new question', ask_path %>
+
+
